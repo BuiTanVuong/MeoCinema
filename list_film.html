@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meo Cinema</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/pageable.js"></script>
+    <script src="vendor/cachu_slider/cachu-slider.js"></script>
+    <link rel="shortcut icon" type="image/icon" href="img/Meo_logo.ico" />
+    <link rel="stylesheet" href="vendor/cachu_slider/cachu-slider.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/animate.css/animate.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_button.css">
+    <link rel="stylesheet" href="css/style_custom.css">
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-body" data-aos="fade-right">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content"
+            aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/Meo_logo.svg" alt=""></a>
+        <div class="collapse navbar-collapse text-center" id="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link control" href="./index.html" group-id="page" data-id="section0"><i
+                            class="fas fa-home"></i><br>Trang chủ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-film "></i> <br> Phim
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item control" group-id="page" data-id="section2" href="./list_film.html">Phim hot trong
+                            tuần</a>
+                        <a class="dropdown-item" href="./list_film.html">Phim sắp chiếu</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-calendar-alt"></i> <br> Sự kiện
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Ưu đãi</a>
+                        <a class="dropdown-item" href="#">Phim hay tháng</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-user-circle"></i><br> Thành viên
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tài khoản</a>
+                        <a class="dropdown-item" href="#">Quyền lợi</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./support.html"><i class="far fa-question-circle"></i> <br>Hỗ trợ</a>
+                </li>
+            </ul>
+        </div>
+        <form class="navbar-form navbar-right text-center" role="search">
+            <div class="form-group input-group">
+                <input type="text" class="form-control" placeholder="Search..">
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button">
+                        <span class="fa fa-search"></span>
+                    </button>
+                </span>
+            </div>
+        </form>
+    </nav>
+    <main id="page">
+        <section data-anchor="Page 1" class="section">
+            <div class="pd_list">
+                <div class="promotion">
+                    <h3>PHIM ĐANG CHIẾU</h3>
+                </div>
+                <div class="row ">
+                    <div class="col-sm-3" data-aos="fade-right">
+                        <div class="list_event_detail">
+                            <div class="img_hover">
+                                <figure>
+                                    <img src="img//vong_luan_hoi_sadako.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="event__detail">
+                                <div class="event___detail">
+                                    <h5>Cập Nhật Thông Tin G-Star 2019</h5>
+                                    <button type="button"><a href="">Chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3" data-aos="fade-right">
+                        <div class="list_event_detail">
+                            <div class="img_hover">
+                                <figure>
+                                    <img src="img//vong_luan_hoi_sadako.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="event__detail">
+                                <div class="event___detail">
+                                    <h5>Galaxy Buôn Ma Thuột : Rạp Mới – Phim Hay – Ưu Đãi Khủng</h5>
+                                    <button type="button"><a href="">Chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" data-aos="fade-left">
+                        <div class="list_event_detail">
+                            <div class="img_hover">
+                                <figure>
+                                    <img src="img//vong_luan_hoi_sadako.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="event__detail">
+                                <div class="event___detail">
+                                    <h5>Ngỡ Ngàng Trước Độ Sang Chảnh Của Galaxy Buôn Ma Thuột</h5>
+                                    <button type="button"><a href="">Chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 position-relative" >
+                        <div class="buy_ticket fixed-right" data-aos="fade-left" >
+                            <div class="buy__ticket">
+                                <h4>Mua vé nhanh</h4>
+                            </div>
+                            <div class="tabcontrol">
+                                <div class="btn-tab">
+                                    <button onclick="show_tab(0);" class="active">Theo phim</button>
+                                    <button onclick="show_tab(1);">Theo ngày</button>
+                                    <button onclick="show_tab(2);">Theo rạp</button>
+                                </div>
+                                <div class="content-tab">
+                                    <div class="content">
+                                        <select name="" id="">
+                                            <option value="">Chọn Phim</option>
+                                            <option value="">Chọn Phim</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Chọn rạp</option>
+                                        </select>
+            
+                                        <select name="" id="">
+                                            <option value="">Chọn ngày</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Chọn suất</option>
+                                        </select>
+                                    </div>
+                                    <div class="content">
+                                        <select name="" id="">
+                                            <option value="">Chọn ngày</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Chọn rạp</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Chọn Phim</option>
+                                        </select>
+            
+                                        <select name="" id="">
+                                            <option value="">Chọn suất</option>
+                                        </select>
+                                    </div>
+                                    <div class="content">
+                                        <select name="" id="">
+                                            <option value="">Chọn rạp</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Chọn Phim</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Chọn ngày</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">Chọn suất</option>
+                                        </select>
+                                    </div>
+                                    <div class="send">
+                                        <button type="button"><a href="#">Đặt vé</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </section>
+        <section data-anchor="Page 2" class="section">
+            <div class="pd_list">
+                <div class="row ">
+                    <div class="col-sm-3" >
+                        <div class="list_event_detail">
+                            <div class="img_hover">
+                                <figure>
+                                    <img src="img//vong_luan_hoi_sadako.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="event__detail">
+                                <div class="event___detail">
+                                    <h5>Cập Nhật Thông Tin G-Star 2019</h5>
+                                    <button type="button"><a href="">Chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <div class="col-sm-3" >
+                        <div class="list_event_detail">
+                            <div class="img_hover">
+                                <figure>
+                                    <img src="img//vong_luan_hoi_sadako.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="event__detail">
+                                <div class="event___detail">
+                                    <h5>Galaxy Buôn Ma Thuột : Rạp Mới – Phim Hay – Ưu Đãi Khủng</h5>
+                                    <button type="button"><a href="">Chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" >
+                        <div class="list_event_detail">
+                            <div class="img_hover">
+                                <figure>
+                                    <img src="img//vong_luan_hoi_sadako.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="event__detail">
+                                <div class="event___detail">
+                                    <h5>Ngỡ Ngàng Trước Độ Sang Chảnh Của Galaxy Buôn Ma Thuột</h5>
+                                    <button type="button"><a href="">Chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" >
+                        <div class="list_event_detail">
+                            <div class="img_hover">
+                                <figure>
+                                    <img src="img//vong_luan_hoi_sadako.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="event__detail">
+                                <div class="event___detail">
+                                    <h5>Ngỡ Ngàng Trước Độ Sang Chảnh Của Galaxy Buôn Ma Thuột</h5>
+                                    <button type="button"><a href="">Chi tiết</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-anchor="Page 3" class="section">
+            <footer class="page-footer font-small blue pt-4">
+                <div class="container-fluid text-center text-md-left">
+                    <div class="row">
+                        <div class="col-md-6 mt-md-0 mt-3 pl-5 slogan">
+                            <p><img src="img/Meo_logo.svg" alt="" style="width:100%"></p>
+                            <p>CÔNG TY TNHH ME CINEMA VIETNAM</p>
+                            <p>65 Đường Huỳnh Thúc Kháng, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam</p>
+                            <p>Hotline: +84 28 3821 2868</p>
+                        </div>
+                        <hr class="clearfix w-100 d-md-none pb-3">
+                        <div class="col-md-3 mb-md-0 mb-3">
+                            <h4 class="text-uppercase">Phim</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#!">Phim hot trong tháng</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Phim sắp chiếu</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-3">
+                            <h4 class="text-uppercase ">Kết nối</h4>
+                            <a class="btn" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center py-2">© 2019 Copyright:
+                    <a href="https://mdbootstrap.com/education/bootstrap/"> cntt.caothang.edu.vn</a>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="vendor/poper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        //page 2 : hover image
+        $(document).on('mouseover', '.section .film_list .column', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+        //page 2 : show hide popup
+        $('.play').click(function () {
+            var trailer = $(this).attr('data-trailer');
+            $('#' + trailer).addClass('show');
+            $('#' + trailer).css('opacity', '1');
+        });
+        $('.popup_trailer').click(function () {
+            $(this).removeClass('show');
+        });
+
+        $(document).on('mouseover', '.image_news img', function () {
+            var data_img = $(this).attr('data-img');
+            $('#' + data_img).addClass('img')
+        });
+        $(document).on('mouseout', '.image_news img', function () {
+            var data_img = $(this).attr('data-img');
+            $('#' + data_img).removeClass('img')
+        });
+    </script>
+    <script>
+        $('#section1,#section2').show();
+        $('.control').click(function () {
+            var group = $(this).attr('group-id');
+            var id = $(this).attr('data-id');
+            $('#' + id).show(1000);
+            $('[group=' + group + ']:not(#' + id + ')').hide();
+        });
+        //$('html, body').animate({
+            //scrollTop: $("#section2").offset().top
+        //}, 2000);
+    </script>
+    <!--OAS master-->
+    <script>
+        AOS.init();
+    </script>
+    <!--Fullscreen Scrolling Presentation In JavaScript – Pageable -->
+    <script>
+        new Pageable("#page", {
+            childSelector: "[data-anchor]", // CSS3 selector string for the pages
+            anchors: [], // define the page anchors
+            pips: true, // display the pips
+            animation: 1000, // the duration in ms of the scroll animation
+            delay: 0, // the delay in ms before the scroll animation starts
+            throttle: 50, // the interval in ms that the resize callback is fired
+            orientation: "vertical", // or horizontal
+            swipeThreshold: 50, // swipe / mouse drag distance (px) before firing the page change event
+            freeScroll: true, // allow manual scrolling when dragging instead of automatically moving to next page
+            navPrevEl: true, // define an element to use to scroll to the previous page (CSS3 selector string or Element reference)
+            navNextEl: false, // define an element to use to scroll to the next page (CSS3 selector string or Element reference)
+            infinite: false, // enable infinite scrolling (from 0.4.0)
+            slideshow: { // enable slideshow that cycles through your pages automatically (from 0.4.0)
+                interval: 30000, // time in ms between page change,
+                delay: 0 // delay in ms after the interval has ended and before changing page
+            },
+            events: {
+                wheel: true, // enable / disable mousewheel scrolling
+                mouse: true, // enable / disable mouse drag scrolling
+                touch: true, // enable / disable touch / swipe scrolling
+                keydown: true, // enable / disable keyboard navigation
+            },
+            easing: function (currentTime, startPos, endPos, interval) {
+                // the easing function used for the scroll animation
+                return -endPos * (currentTime /= interval) * (currentTime - 2) + startPos;
+            },
+            onInit: function () {
+                // do something when the instance is ready
+            },
+            onUpdate: function () {
+                // do something when the instance updates
+            },
+            onBeforeStart: function () {
+                // do something before scrolling begins
+            },
+            onStart: function () {
+                // do something when scrolling begins
+            },
+            onScroll: function () {
+                // do something during scroll
+            },
+            onFinish: function () {
+                // do something when scrolling ends
+            },
+        });
+    </script>
+    <script>
+        import DirectionReveal from 'direction-reveal';
+
+        // Init with default setup
+        const directionRevealDemo = DirectionReveal();
+
+        // Init with all options at default setting
+        const directionRevealDefault = DirectionReveal({
+            selector: '.direction-reveal',
+            itemSelector: '.direction-reveal__card',
+            animationName: 'swing',
+            animationPostfixEnter: 'enter',
+            animationPostfixLeave: 'leave',
+            enableTouch: true,
+            touchThreshold: 250
+        });
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>

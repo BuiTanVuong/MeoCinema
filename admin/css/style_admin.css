@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.wrapper{
+    width: 95%;
+    margin: auto;
+    box-shadow: 3px 3px 0 3px rgba(0, 0, 0, 0.2);
+}
+header{
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 15vh;
+    width: 100%;
+    position: relative;
+    background:linear-gradient(45deg, rgb(141, 223, 243),rgb(11, 188, 219));
+}
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%)
+}
+main{
+    display: flex;
+    width: 100%;
+}
+main aside.left{
+    width: 20%;
+    
+    height: 100%;
+}
+main .left #accordion {
+    background-color: transparent;
+}
+main .left #accordion ul{
+    padding: 0;   
+}
+main .left #accordion ul .card{
+    border-radius: 0;
+    background-color: transparent;
+    border: unset;
+}
+main .left #accordion ul .card{
+    left: 0;  
+}
+main .left #accordion ul .card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 3px;
+    background-color: red;
+    transition: 0.5s
+}
+main .left #accordion ul .card:hover{
+    animation: move_right 0.5s;
+    left: 20px;
+}
+main .left #accordion ul .card:hover::before{
+    height: 100%;
+}
+@keyframes move_right{
+    0%{
+        left: 0;
+    }
+    25%{
+        left: 5px;
+    }
+    100%{
+        left: 20px;
+    }
+}
+main .left #accordion ul .card .card-header:first-child{
+    border-radius: unset;
+}
+main .left #accordion ul .card .card-header{
+    background-color: rgb(11, 188, 219);
+}
+main .left #accordion ul .card .card-header a{
+    color: white;
+}
+main aside.right{
+    background-color: red;
+    width: 80%;
+    height: 100%;
+    
+}
+footer{
+    height: 10vh;
+    width: 100%;
+}

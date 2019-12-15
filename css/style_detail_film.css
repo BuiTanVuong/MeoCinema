@@ -1,0 +1,43 @@
+.detail_film {
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  width: 90%;
+  margin-left: 5%;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap; }
+  .detail_film .detail_left {
+    width: 30%; }
+    .detail_film .detail_left::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: red;
+      z-index: 1000;
+      transform: rotate(45deg); }
+    .detail_film .detail_left img {
+      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); }
+  .detail_film .detail_right {
+    width: 70%;
+    background-color: rgba(255, 251, 251, 0.8);
+    color: #000;
+    border-radius: 0.25em; }
+    .detail_film .detail_right .tab-content i.fa-star {
+      color: yellow;
+      font-size: 20px; }
+    .detail_film .detail_right .tab-content button {
+      margin-left: 10px;
+      border: none;
+      padding: 5px 10px;
+      background-color: red;
+      color: white; }
+    .detail_film .detail_right .tab-content p {
+      margin-bottom: 0.5em; }
+    .detail_film .detail_right .detaile_inner .nav-tabs .nav-link.active {
+      background-color: red; }
+
+/*# sourceMappingURL=style_detail_film.css.map */

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meo Cinema</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/pageable.js"></script> 
+    <script src="vendor/cachu_slider/cachu-slider.js"></script>
+    <link rel="shortcut icon" type="image/icon" href="img/Meo_logo.ico" />
+    <link rel="stylesheet" href="vendor/cachu_slider/cachu-slider.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/animate.css/animate.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_button.css">
+    <link rel="stylesheet" href="css/style_custom.css">
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark text-body" data-aos="fade-right">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content"
+            aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html"><img src="img/Meo_logo.svg" alt=""></a>
+        <div class="collapse navbar-collapse text-center" id="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link control" href="./index.html" group-id="page" data-id="section0"><i
+                            class="fas fa-home"></i><br>Trang chủ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./list_film.html" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-film "></i> <br> Phim
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item control" group-id="page" data-id="section2" href="#">Phim hot trong
+                            tuần</a>
+                        <a class="dropdown-item" href="#">Phim sắp chiếu</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-calendar-alt"></i> <br> Sự kiện
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./list_event.html">Ưu đãi</a>
+                        <a class="dropdown-item" href="./list_film.html">Phim hay tháng</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./support.html"><i class="far fa-question-circle"></i> <br>Hỗ trợ</a>
+                </li>
+            </ul>
+        </div>
+        <form class="navbar-form navbar-right text-center" role="search">
+            <div class="form-group input-group">
+                <span class="input-group-btn">
+                    <button id="open_form" class="btn btn-danger" type="button">
+                        <i class="fas fa-user-tie"></i>
+                    </button>
+                </span>
+                <input type="text" id="search" class="form-control" placeholder="Tìm kiếm">             
+            </div>
+        </form>
+    </nav>
+    <div id="login" >
+        <div class="login">
+            <div class="login_inner">
+                <div class="btn_close"><button type="button"><i class="fas fa-times-circle"></i></button></div>
+                <ul>
+                    <li><a href="#" data-id="login_form" group="form_login" class="control">Đăng nhập</a></li>
+                    <li>
+                        <strong>/</strong>
+                    </li>
+                    <li>
+                        <a href="#" data-id="registration" group="form_login" class="control">Đăng kí</a>
+                    </li>
+                </ul>
+                <div class="form_cinema">
+                    <div class="form_login active" id="login_form">
+                        <form action="">
+                            <input type="text" name="username" placeholder="Tên Đăng nhập">
+                            <input type="password" name="password" placeholder="Mật khẩu">
+                            <input type="submit" value="Đăng nhập" class="btn-danger">
+                            <div><a href="#">Quên mật khẩu?</a></div> 
+                            <hr>
+                            <button class="social facebook"><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</button>
+                            <button class="social google"><i class="fab fa-google-plus-g"></i> Đăng nhập bằng Google+</button>
+                        </form>           
+                    </div>
+                    <div class="form_login" id="registration">
+                        <form action="">
+                            <input type="text" name="username" placeholder="Tên Đăng nhập">
+                            <input type="password" name="password_01" placeholder="Mật khẩu">
+                            <input type="password" name="password_02" placeholder="Nhập lại mật khẩu">                    
+                            <input type="submit" value="Đăng kí" class="btn-danger">
+                            <hr>
+                            <button class="social facebook"><i class="fab fa-facebook-f"></i> Đăng nhập bằng Facebook</button>
+                            <button class="social google"><i class="fab fa-google-plus-g"></i> Đăng nhập bằng Google+</button>
+                        </form>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main id="page">
+        <section data-anchor="Page 1" class="section">
+            <video autoplay loop preload muted>
+                <source src="video/home.mp4" type="video/mp4">
+            </video>
+            <div class="buy_ticket" data-aos="fade-left">
+                <div class="buy__ticket">
+                    <h4>Mua vé nhanh</h4>
+                </div>
+                <div class="tabcontrol">
+                    <div class="btn-tab">
+                        <button onclick="show_tab(0);" class="active">Theo phim</button>
+                        <button onclick="show_tab(1);">Theo ngày</button>
+                        <button onclick="show_tab(2);">Theo rạp</button>
+                    </div>
+                    <div class="content-tab">
+                        <div class="content">
+                            <select name="" id="">
+                                <option value="">Chọn Phim</option>
+                                <option value="">Chọn Phim</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">Chọn rạp</option>
+                            </select>
+
+                            <select name="" id="">
+                                <option value="">Chọn ngày</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">Chọn suất</option>
+                            </select>
+                        </div>
+                        <div class="content">
+                            <select name="" id="">
+                                <option value="">Chọn ngày</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">Chọn rạp</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">Chọn Phim</option>
+                            </select>
+
+                            <select name="" id="">
+                                <option value="">Chọn suất</option>
+                            </select>
+                        </div>
+                        <div class="content">
+                            <select name="" id="">
+                                <option value="">Chọn rạp</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">Chọn Phim</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">Chọn ngày</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">Chọn suất</option>
+                            </select>
+                        </div>
+                        <div class="send">
+                            <button type="button"><a href="#">Đặt vé</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-anchor="Page 2" class="section" >
+            <div class="film_list">
+                <div class="column active">
+                    <div class="play_trailer">
+                        <button class='play' data-trailer="trailer_film_01">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="detail">
+                            <button type="button"> <a href="./detail_film.html">Chi tiết</a></button>
+                            <button type="button"> <a href="">Mua vé</a></button>
+                        </div>
+                    </div>
+                    <div class="bg bg1"></div>
+                </div>
+                <div class="column ">
+                    <div class="play_trailer">
+                        <button class='play' data-trailer="trailer_film_02">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="detail">
+                            <button type="button"> <a href="">Chi tiết</a></button>
+                            <button type="button"> <a href="">Mua vé</a></button>
+                        </div>
+                    </div>
+                    <div class="bg bg2"></div>
+                </div>
+                <div class="column">
+                    <div class="play_trailer">
+                        <button class=' play' data-trailer="trailer_film_03">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="detail">
+                            <button type="button"> <a href="">Chi tiết</a></button>
+                            <button type="button"> <a href="">Mua vé</a></button>
+                        </div>
+                    </div>
+                    <div class="bg bg3"></div>
+                </div>
+                <div class="column">
+                    <div class="play_trailer">
+                        <button class='play' data-trailer="trailer_film_04">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="detail">
+                            <button type="button"> <a href="">Chi tiết</a></button>
+                            <button type="button"> <a href="">Mua vé</a></button>
+                        </div>
+                    </div>
+                    <div class="bg bg4"></div>
+                </div>
+            </div>
+            <div class="popup_trailer" id="trailer_film_01">
+                <div class="iframe"> 
+                    <iframe class="stop_video" width="800" height="450" src="https://www.youtube.com/embed/TP0c55uyL_Y" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="popup_trailer" id="trailer_film_02">
+                <div class="iframe"> 
+                    <iframe class="stop_video" width="800" height="450" src="https://www.youtube.com/embed/LaGaezGXpk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="popup_trailer" id="trailer_film_03">
+                <div class="iframe"> 
+                    <iframe class="stop_video" width="800" height="450" src="https://www.youtube.com/embed/2H-1e4XNLBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="popup_trailer" id="trailer_film_04">
+                <div class="iframe"> 
+                        <iframe class="stop_video" width="800" height="450" src="https://www.youtube.com/embed/q8DiM8_lVVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section data-anchor="Page 3" class="section" >
+            <div class="event_news ">
+                <aside class="event_left animated  bounceInLeft delay-1s">
+                    <h3 class="title text-uppercase">Khuyến mãi</h3>
+                    <h6><a href="./list_event.html">Xem thêm...</a></h6>
+                    <div class="event_detail">
+                        <div class="event_slide">
+                            <img src="img/envent_4.jpg" alt="Cập Nhật Thông Tin G-Star 2019">
+                            <div class="detail_event_inner">
+                                <h5>Cập Nhật Thông Tin G-Star 2019</h5>
+                                <button type="button"><a href="./detail_event.html">Chi tiết</a></button>
+                            </div>
+                        </div>
+                        <div class="event_slide">
+                            <img src="img/event__2.jpg" alt="">
+                            <div class="detail_event_inner">
+                                <h5>Galaxy Buôn Ma Thuột: Rạp Mới – Phim Hay – Ưu Đãi Khủng</h5>
+                                <button type="button"><a href="./detail_event.html">Chi tiết</a></button>
+                            </div>
+                        </div>
+                        <div class="event_slide">
+                            <img src="img/event__3.jpg" alt="">
+                            <div class="detail_event_inner">
+                                <h5>Ngỡ Ngàng Trước Độ Sang Chảnh Của Galaxy Buôn Ma Thuột</h5>
+                                <button type="button"><a href="./detail_event.html">Chi tiết</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <aside class=" news animated  bounceInRight delay-1s">
+                    <h3 class="title text-uppercase">Tin tức điện ảnh</h3>
+                    <div class="slide_news">
+                        <div class="image_news">
+                            <img src="img/news_1.jpg" alt="" data-img="img_01">
+                        </div>
+                        <div class="detail_news">
+                            <h5 id="img_01">Loạt Bí Mật Động Trời Marvel Vừa Hé Lộ Về Phase 4</h5>
+                            <iframe id="iframe_01"
+                                src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D19tOuXPdwfA&width=112&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId=297903077427470"
+                                width="112" height="30" style="border:none;overflow:hidden" scrolling="no"
+                                frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                            <p>Mười một năm từ công ty thoi thóp phải “bán con” để sống, Marvel vượt xa tất cả đối thủ.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide_news">
+                        <div class="image_news">
+                            <img src="img/news_2.jpg" alt="" data-img="img_02">
+                        </div>
+                        <div class="detail_news">
+                            <h5 id="img_02">Loạt Bí Mật Động Trời Marvel Vừa Hé Lộ Về Phase 4</h5>
+                            <iframe
+                                src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D19tOuXPdwfA&width=112&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId=297903077427470"
+                                width="112" height="30" style="border:none;overflow:hidden" scrolling="no"
+                                frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                            <p>Không đẹp trai như Tom Cruise, diễn chẳng hay cỡ Will Smith nhưng hội đầu trọc đầu hói
+                                sáu..</p>
+                        </div>
+                    </div>
+                    <div class="slide_news">
+                        <div class="image_news">
+                            <img src="img/news_3.jpg" alt="" data-img="img_03">
+                        </div>
+                        <div class="detail_news">
+                            <h5 id="img_03">Những Gã Trọc Đầu Gây Bão Phòng Vé</h5>
+                            <iframe
+                                src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D19tOuXPdwfA&width=112&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId=297903077427470"
+                                width="112" height="30" style="border:none;overflow:hidden" scrolling="no"
+                                frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                            <p>Sau khi được tung ra, teaser Mắt Biếc ngay lập tức đã trở thành chủ đề cực hot trên mạng
+                                .. </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <section data-anchor="Page 4" class="section">       
+            <div id="slogan">
+                <h3 class="text-uppercase">Về chúng tôi</h3>
+                <p class="mt-4">
+                    <a href="./index.html">ME Cinema </a>là một trong những công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003, đã khẳng định thương hiệu là 1 trong 10 địa điểm vui chơi giải trí được yêu thích nhất. Ngoài hệ thống rạp chiếu phim hiện đại, thu hút hàng triệu lượt người đến xem, <a href="./index.html">ME Cinema </a> còn hấp dẫn khán giả bởi không khí thân thiện cũng như chất lượng dịch vụ hàng đầu.
+                </p>
+                <p>
+                    Quý khách sẽ được cập nhật nhanh chóng các phim hay nhất phim mới nhất đang chiếu hoặc sắp chiếu. Lịch chiếu tại mọi hệ thống rạp chiếu phim của <a href="./index.html">ME Cinema </a> cũng được cập nhật đầy đủ hàng ngày hàng giờ trên trang chủ.
+                </p>
+                <p>
+                    Đặt vé tại ME Cinema dễ dàng chỉ sau vài thao tác vô cùng đơn giản. Để mua vé, hãy vào tab Mua vé. Quý khách có thể chọn Mua vé theo phim, theo rạp, theo ngày tùy cách nào tiện lợi nhất cho bản thân.Sau đó, tiến hành mua vé theo các bước hướng dẫn. Chỉ trong vài phút, quý khách sẽ nhận được tin nhắn và email phản hồi Đặt vé thành công của ME Cinema. Quý khách có thể dùng tin nhắn lấy vé tại quầy vé của ME Cinema hoặc quét mã QR để một bước vào rạp mà không cần tốn thêm bất kỳ công đoạn nào nữa.
+                </p>
+                <p>
+                    Hiện nay,<a href="./index.html">ME Cinema </a> đang ngày càng phát triển hơn nữa với các chương trình đặc sắc, các khuyến mãi hấp dẫn, đem đến cho khán giả những bộ phim bom tấn của thế giới và Việt Nam nhanh chóng và sớm nhất.
+                </p>
+            </div>
+            <footer class="page-footer font-small blue pt-4">
+                <div class="container-fluid text-center text-md-left">
+                    <div class="row">
+                        <div class="col-md-6 mt-md-0 mt-3 pl-5 slogan">
+                            <p><img src="img/Meo_logo.svg" alt="" style="width:100%"></p>
+                            <p>CÔNG TY TNHH ME CINEMA VIETNAM</p>
+                            <p>65 Đường Huỳnh Thúc Kháng, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam</p>
+                            <p>Hotline: +84 28 3821 2868</p>
+                        </div>
+                        <hr class="clearfix w-100 d-md-none pb-3">
+                        <div class="col-md-3 mb-md-0 mb-3">
+                            <h4 class="text-uppercase">Phim</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#!">Phim hot trong tháng</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Phim sắp chiếu</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-3">
+                            <h4 class="text-uppercase ">Kết nối với chúng tôi</h4>
+                            <a class="btn" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn" href="#">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center py-2">© 2019 Copyright:
+                    <a href="https://mdbootstrap.com/education/bootstrap/"> cntt.caothang.edu.vn</a>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="vendor/poper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        //page 2 : hover image
+        $(document).on('mouseover', '.section .film_list .column', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+        //page 2 : show hide popup
+        $('.play').click(function(){
+            var  trailer = $(this).attr('data-trailer');
+            $('#'+trailer).addClass('show');
+            $('#'+trailer).css('opacity','1');
+        });
+        $('.popup_trailer').click(function(){
+            $(this).removeClass('show');  
+            $('.stop_video').each(function(){
+                this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+            });                 
+        });
+        $(document).on('mouseover', '.image_news img', function () {
+            var data_img = $(this).attr('data-img');
+            $('#' + data_img).addClass('img')
+        });
+        $(document).on('mouseout', '.image_news img', function () {
+            var data_img = $(this).attr('data-img');
+            $('#' + data_img).removeClass('img')
+        });
+    </script>
+    <script>
+        $('#section1,#section2').show();
+        $('.control').click(function () {
+            var group = $(this).attr('group-id');
+            var id = $(this).attr('data-id');
+            $('#' + id).show(1000);
+            $('[group=' + group + ']:not(#' + id + ')').hide();
+        });
+        // $('html, body').animate({
+        //     scrollTop: $("#section2").offset().top
+        // }, 2000);
+    </script>
+    <script>
+        $('#open_form').click(function(){
+            $('#login').css('display','block');
+        });
+        $('.btn_close').click(function(){
+            $('#login').css('display','none');
+        });
+    </script>
+    <!--OAS master-->
+    <script>
+        AOS.init();
+    </script>
+    <!--Fullscreen Scrolling Presentation In JavaScript – Pageable -->
+    <script>
+        new Pageable("#page", {
+            childSelector: "[data-anchor]", // CSS3 selector string for the pages
+            anchors: [], // define the page anchors
+            pips: true, // display the pips
+            animation: 1000, // the duration in ms of the scroll animation
+            delay: 0, // the delay in ms before the scroll animation starts
+            throttle: 50, // the interval in ms that the resize callback is fired
+            orientation: "vertical", // or horizontal
+            swipeThreshold: 50, // swipe / mouse drag distance (px) before firing the page change event
+            freeScroll: false, // allow manual scrolling when dragging instead of automatically moving to next page
+            navPrevEl: true, // define an element to use to scroll to the previous page (CSS3 selector string or Element reference)
+            navNextEl: false, // define an element to use to scroll to the next page (CSS3 selector string or Element reference)
+            infinite: false, // enable infinite scrolling (from 0.4.0)
+            slideshow: { // enable slideshow that cycles through your pages automatically (from 0.4.0)
+                interval: 30000, // time in ms between page change,
+                delay: 0 // delay in ms after the interval has ended and before changing page
+            },
+            events: {
+                wheel: true, // enable / disable mousewheel scrolling
+                mouse: true, // enable / disable mouse drag scrolling
+                touch: true, // enable / disable touch / swipe scrolling
+                keydown: true, // enable / disable keyboard navigation
+            },
+            easing: function (currentTime, startPos, endPos, interval) {
+                // the easing function used for the scroll animation
+                return -endPos * (currentTime /= interval) * (currentTime - 2) + startPos;
+            },
+            onInit: function () {
+                // do something when the instance is ready
+            },
+            onUpdate: function () {
+                // do something when the instance updates
+            },
+            onBeforeStart: function () {
+                // do something before scrolling begins
+            },
+            onStart: function () {
+                // do something when scrolling begins
+            },
+            onScroll: function () {
+                // do something during scroll
+            },
+            onFinish: function () {
+                // do something when scrolling ends
+            },
+        });
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script>
+        var width = window.innerWidth;
+        if ( width >= '320' && width <= '480'){
+           document.getElementById('page-2').style.height ='1000px';
+        }
+    </script>
+    <script>
+        $('.control').click(function(){
+            var id = $(this).attr('data-id');
+            var group = $(this).attr('group');
+            $('.'+group).each(function(){
+                $(this).removeClass('active');
+                $(this).css('display','none');
+            });
+            $('#'+id).addClass('active');
+            $('#'+id).css('display','block');
+        });
+    </script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>

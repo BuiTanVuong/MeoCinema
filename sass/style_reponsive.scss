@@ -1,0 +1,32 @@
+@media only screen and (max-width : 320px)
+{
+    
+}
+@media only screen and (min-width: 320px) and (max-width:480px)
+{   
+    .section{
+        height:200vh
+    }
+    .section .buy_ticket{
+        width: 80%;
+        right: 5%;
+    }
+    .section .film_list .column{
+        width: 100%;
+        height: 250px;
+    }
+    .section .event_news .event_left{
+        width: 100%;
+    }
+    .section .event_news .news{
+        width: 100%;
+    }
+    .section .film_list .column{
+        position: relative;
+    }
+    .section .film_list .column.active .bg{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}

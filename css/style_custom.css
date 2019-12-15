@@ -1,0 +1,227 @@
+.navbar-toggler-icon{
+    color: #dc3545;
+    background-color: #dc3545;
+}
+.container-fluid .row img{
+    width: 100%;
+}
+.input-group-btn .btn{
+    border-radius:  50%;
+    border: unset;
+}
+.input-group #search{
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+.row .slogan p{
+    margin: unset;
+    font-size: 14px;
+}
+.row .slogan p:nth-child(1){
+    padding-bottom: 10px;
+}
+.row .slogan p img{
+    width: 114px !important;
+}
+.list-unstyled li a{
+    color: rgba(0, 0, 0, 0.5);
+}
+.list-unstyled li a:hover{
+    color: red;
+    text-decoration: none;
+}
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+.nav-tabs .nav-item:hover a::after{
+    width: 100%;
+}
+.nav-tabs .nav-item{
+    margin-right: 5px;
+}
+.nav-tabs .nav-item a{
+    position: relative;
+    color: white;
+}
+.nav-tabs .nav-item:hover{
+    outline: none;
+    border: none;
+}
+.nav-tabs .nav-item.active a::after{
+    width: 100%;
+}
+.nav-tabs .nav-item a::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width:0;
+    background-color: red;
+    height: 2px;
+    transition: 1s;
+}
+.nav-tabs .nav-item:hover{
+    border: unset;
+    outline: 0;
+    outline-style: none;
+    outline-color: transparent;
+}
+.nav-item{
+    font-size: unset;
+}
+.nav-tabs {
+    border-bottom: unset;
+}
+.tab-content>.tab-pane{
+    overflow-y: auto;
+}
+.tab-content>.tab-pane h3{
+    color: red
+}
+.nav-tabs .nav-link {
+    border: unset;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0; 
+}
+.list_film_detail{
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+.pd_list{
+    position: absolute;
+    top: 30vh;
+    width: 90%;
+    margin-left: 5%;
+}
+.pd_list .promotion {
+    position: fixed;
+    top: 14vh;
+    left: 5%;
+}
+.pd_list .promotion h3{
+    margin: 20px 0;
+    color: red;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+}
+.pd_list h3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100px;
+    height: 2px;
+    background-color: red;
+}
+.page-2 .pd_list{
+    width: 50%;
+}
+.dropdown-menu{
+    top: 90%;
+}
+.dropdown-item:focus{
+    background-color: red;
+}
+.dropdown-item:focus a{
+    color: white;
+}
+
+/* button +/- */
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 38px;
+    padding: 0 2px;
+    min-width: 38px;
+}
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 38px;
+    height: 38px;
+    font: 38px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    }
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 38px;
+    height: 38px;
+    font: 38px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+input[type="number"]{
+    text-align: center;
+    border-radius:50%;
+}
+/*Prevent text selection*/
+span{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+input{  
+    border: 0;
+    width: 2%;
+}
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled{
+    background-color:white;
+}
+
+.modal-body hr{
+    border-top:3px solid black;
+    
+}
+.modal-body hr::before{
+    content: "Màn hình";
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%,-50%);
+    color: red;
+    text-align: center;
+    font-weight: 500;
+}
+
+.fixed-right{
+    padding: 30px;
+    top: 0;
+    width: 100% !important;
+    left: 30px !important;
+    bottom: unset !important;
+    z-index: 100000 !important;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    background-color: white;
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    padding: 5px 10px !important;
+}
+.owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover{
+    background-color: red;
+    color: white;
+}
